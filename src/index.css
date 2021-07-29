@@ -1,13 +1,93 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(118,49,152);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 2em;
+  display: flex;
+  gap: 3em;
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  height: 170px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  flex-shrink: 0;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.step {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  color: gray;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.number {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(192, 192, 192);
+  border-radius: 50%;
+  line-height: 1;
+  font-weight: 600;
+  color: rgb(107, 107, 107);
+  padding-bottom: 1px;
+}
+
+.active {
+  color: black;
+}
+
+.active .number {
+  background-color: rgb(74, 114, 223);
+  color: white;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+
+.buttons button {
+  background-color: rgb(192, 192, 192);
+  padding: .8em 2em;
+  border: none;
 }
